@@ -13,7 +13,7 @@ const getAllPokemon = async (req, res) => {
 //get a single pokemon by id
 const getPokemonById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id, 10);
     const pokemon = pokedex.find(p => p.id === id);
 
     if (!pokemon) {
@@ -30,7 +30,7 @@ const getPokemonById = async (req, res) => {
 //get a specific info about a pokemon
 const getPokemonInfoById = async (req, res) => {
   try {
-    const id = parseInt(req.params.id, 10);
+    const id = parseInt(req.params.id);
     const info = req.params.info;
     const pokemon = pokedex.find(p => p.id === id);
 
