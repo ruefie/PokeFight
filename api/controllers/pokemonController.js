@@ -1,4 +1,4 @@
-const pokedex = require('../pokedex.json')
+const pokedex = require('../../pokedex.json')
 
 //get all list of pokemons
 const getAllPokemon = async (req, res) => {
